@@ -3,6 +3,13 @@ from configparser import ConfigParser
 import setuptools
 assert parse_version(setuptools.__version__)>=parse_version('36.2')
 
+
+def requirements(path='requirements.txt'):
+    with open(path, 'r') as f:
+        deps = [line.strip() for line in f]
+    return deps
+
+
 # note: all settings are in settings.ini; edit there, not here
 config = ConfigParser(delimiters=['='])
 config.read('settings.ini')
@@ -20,7 +27,6 @@ statuses = [ '1 - Planning', '2 - Pre-Alpha', '3 - Alpha',
     '4 - Beta', '5 - Production/Stable', '6 - Mature', '7 - Inactive' ]
 py_versions = '2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8'.split()
 
-requirements = cfg.get('requirements','').split()
 lic = licenses[cfg['license']]
 min_python = cfg['min_python']
 
@@ -36,7 +42,7 @@ setuptools.setup(
     url = cfg['git_url'],
     packages = setuptools.find_packages(),
     include_package_data = True,
-    install_requires = requirements,
+    install_requires = requirements(),
     dependency_links = cfg.get('dep_links','').split(),
     python_requires  = '>=' + cfg['min_python'],
     long_description = open('README.md').read(),
