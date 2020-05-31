@@ -11,7 +11,7 @@ author [Harrison Mamin]:
 email [hmamin55@gmail.com]: 
 dir_name [Your project name (no spaces, lowercase)]:
 description [Description of your library.]:
-services [yes]:
+apps [yes]:
 reports [yes]:
 ```
 
