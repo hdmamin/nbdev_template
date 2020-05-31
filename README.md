@@ -1,44 +1,37 @@
 # Project Template
 
-This template can be used to create a new data science project. You must have [cookiecutter](https://pypi.org/project/cookiecutter/) installed:
+This template can be used to create a new data science project. You must have [cookiecutter](https://pypi.org/project/cookiecutter/) and [nbdev](https://pypi.org/project/nbdev/) installed:
 
-```pip install cookiecutter```
+```pip install cookiecutter nbdev```
 
-To create a new project, run the command: `cookiecutter ~/ds_template`. You will be prompted to enter some basic information about the project. If you hit `Enter` without specifying a value, the default value (shown in brackets) will be used. Some directories (e.g. lib) are optional and will only be generated if you answer 'yes' to that option when creating your project. 
+If you clone this repo into your home directory, you can create a new project by running the command: `cookiecutter ~/nbdev_template`. You will be prompted to enter some basic information about the project. If you hit `Enter` without specifying a value, the default value (shown in brackets) will be used. Some directories (e.g. apps) are optional and will only be generated if you answer 'yes' to that option when creating your project. 
 
 ```
 author [Harrison Mamin]: 
 email [hmamin55@gmail.com]: 
-dir_name [HelloWorld]:
-description [Data Science project.]:
-lib [yes]:
+dir_name [Your project name (no spaces, lowercase)]:
+description [Description of your library.]:
 services [yes]:
+reports [yes]:
 ```
 
-In this example, the following file structure was generated. The information you enter will determine which directories are generated and will populate various fields throughout the project. 
+In this example, the following file structure would be generated inside a directory with your specified `dir_name`. The information you enter will determine which directories are generated and will populate various fields throughout the project. 
 
 ```
-HelloWorld/
+├── CONTRIBUTING.md
+├── LICENSE
+├── MANIFEST.in
 ├── README.md
-├── .gitignore
-├── data
-│   └── README.md
-├── notebooks
-│   └── README.md
-├── reports
-│   └── README.md
-├── bin
-│   └── README.md
-├── services
-│   └── README.md
-└── lib
-    ├── helloworld
-    │   ├── __init__.py
-    │   └── utils.py
-    ├── MANIFEST.in
-    ├── README.md
-    ├── requirements.txt
-    └── setup.py
+├── bin/
+├── data/
+├── dev_notebooks/
+├── docs/
+├── notebooks/
+├── reports/
+├── services/
+├── requirements.txt
+├── settings.ini
+└── setup.py
 ```
 
 From the project's root directory, you can run the command `pip install -e lib`. This will make your package importable from other directories. 
