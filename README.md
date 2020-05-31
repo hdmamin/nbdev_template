@@ -34,5 +34,3 @@ In this example, the following file structure would be generated inside a direct
 └── setup.py
 ```
 
-From the project's root directory, you can run the command `pip install -e lib`. This will make your package importable from other directories. 
-
