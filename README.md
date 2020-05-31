@@ -25,8 +25,8 @@ In this example, the following file structure would be generated inside a direct
 ├── bin/
 ├── data/
 ├── dev_notebooks/
-├── docs/
 ├── notebooks/
+├── notes/
 ├── reports/
 ├── services/
 ├── requirements.txt

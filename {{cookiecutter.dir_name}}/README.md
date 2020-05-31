@@ -10,6 +10,7 @@
 ```
 {{ cookiecutter.dir_name }}/
 ├── data             # Raw and processed data. Actual files are excluded from github.
+├── notes            # Miscellaneous notes stored as raw text files.
 ├── notebooks        # Jupyter notebooks for experimentation and exploratory analysis.
 ├── dev_notebooks    # Jupyter notebooks for library development.
 ├── reports          # Markdown reports (performance reports, blog posts, etc.)
